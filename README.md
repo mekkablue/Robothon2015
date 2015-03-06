@@ -2,7 +2,7 @@
 
 These are the plugins I coded on stage at [Robothon 2015](http://robofab.com/robothon/). After installation, they will add the menu items *View > Show Bounds* and *Filter > Random Rotate*. You can set keyboard shortcuts in System Preferences.
 
-In case you saw the live stream (or are wtching the recording later), the second example didn’t work out live on stage because I forgot to compile my .xib to a .nib. If you wonder what that is, it is explained in the Readme of the [GlyphsSDK](https://github.com/schriftgestalt/GlyphsSDK) and in the step-by-step instructions inside the comments of the .py files.
+In case you saw the live stream (or are watching the recording later), the second example didn’t work out live on stage because I forgot to compile my .xib to a .nib. If you wonder what that is, it is explained in the Readme of the [GlyphsSDK](https://github.com/schriftgestalt/GlyphsSDK) and in the step-by-step instructions inside the comments of the .py files.
 
 ### Installation
 
