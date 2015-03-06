@@ -214,9 +214,9 @@ class RandomRotate ( GSFilterPlugin ):
 	def rotationTransform( self, angle, center ):
 		try:
 			rotation = NSAffineTransform.transform()
-			rotation.translateXBy_yBy_( center.x, center.y )
-			rotation.rotateByDegrees_( angle )
 			rotation.translateXBy_yBy_( -center.x, -center.y )
+			rotation.rotateByDegrees_( angle )
+			rotation.translateXBy_yBy_( center.x, center.y )
 			return rotation
 		except Exception as e:
 			self.logToConsole( "rotationTransform: %s" % str(e) )
