@@ -205,8 +205,8 @@ class RandomRotate ( GSFilterPlugin ):
 	def centerOfLayer( self, Layer ):
 		try:
 			bounds = Layer.bounds
-			x = bounds.origin.x + bounds.size.width
-			y = bounds.origin.y + bounds.size.height
+			x = bounds.origin.x + 0.5 * bounds.size.width
+			y = bounds.origin.y + 0.5 * bounds.size.height
 			return NSPoint( x, y )
 		except Exception as e:
 			self.logToConsole( "centerOfLayer: %s" % str(e) )
@@ -214,9 +214,9 @@ class RandomRotate ( GSFilterPlugin ):
 	def rotationTransform( self, angle, center ):
 		try:
 			rotation = NSAffineTransform.transform()
-			rotation.translateXBy_yBy_( -center.x, -center.y )
-			rotation.rotateByDegrees_( angle )
 			rotation.translateXBy_yBy_( center.x, center.y )
+			rotation.rotateByDegrees_( angle )
+			rotation.translateXBy_yBy_( -center.x, -center.y )
 			return rotation
 		except Exception as e:
 			self.logToConsole( "rotationTransform: %s" % str(e) )
